@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Rafraîchir -->
+    <item
+        android:id="@+id/action_refresh"
+        android:icon="@drawable/ic_refresh"
+        android:title="Rafraîchir"
+        app:showAsAction="ifRoom" />
+
+    <!-- Connexion Admin -->
+    <item
+        android:id="@+id/action_admin"
+        android:icon="@drawable/ic_admin"
+        android:title="Admin"
+        app:showAsAction="ifRoom" />
+
+    <!-- Tableau de bord Admin (visible seulement si connecté) -->
+    <item
+        android:id="@+id/action_dashboard"
+        android:icon="@drawable/ic_dashboard"
+        android:title="Tableau de bord"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+    <!-- Déconnexion (visible seulement si connecté) -->
+    <item
+        android:id="@+id/action_logout"
+        android:icon="@drawable/ic_logout"
+        android:title="Déconnexion"
+        android:visible="false"
+        app:showAsAction="never" />
+</menu>
