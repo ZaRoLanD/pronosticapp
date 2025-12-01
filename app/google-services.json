@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "78272914029",
+    "project_id": "soldano-winner",
+    "storage_bucket": "soldano-winner.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:78272914029:android:6da6976d59bdbe511b5564",
+        "android_client_info": {
+          "package_name": "com.zaro.pronosticapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5cdTI9kS8u6iv-_WMIHG3nhyaY7vORwc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
