@@ -1,5 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">pronosticapp</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">Pronostics Sportifs</string>
+
+    <!-- Menu -->
+    <string name="action_refresh">Rafraîchir</string>
+    <string name="action_admin">Admin</string>
+    <string name="action_dashboard">Tableau de bord</string>
+    <string name="action_logout">Déconnexion</string>
+
+    <!-- Onglets -->
+    <string name="tab_pronostics">Pronostics</string>
+    <string name="tab_history">Historique</string>
+
+    <!-- Messages -->
+    <string name="no_pronostics">Aucun pronostic disponible pour le moment</string>
+    <string name="no_history">Aucun historique disponible</string>
+    <string name="loading">Chargement…</string>
+    <string name="error_loading">Erreur de chargement</string>
+
+    <!-- Admin -->
+    <string name="admin_login">Connexion Administrateur</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Mot de passe</string>
+    <string name="login_button">Se connecter</string>
+    <string name="login_error">Email ou mot de passe incorrect</string>
+    <string name="welcome_admin">Bienvenue</string>
+
+    <!-- Formulaire ajout match -->
+    <string name="add_pronostic">Ajouter un pronostic</string>
+    <string name="country_hint">Pays</string>
+    <string name="league_hint">Ligue</string>
+    <string name="team1_hint">Équipe 1</string>
+    <string name="team2_hint">Équipe 2</string>
+    <string name="select_datetime">Sélectionner la date et l\'heure</string>
+    <string name="pronostic_hint">Pronostic (ex: 1, X, 2, Over 2.5)</string>
+    <string name="visible_immediately">Visible immédiatement</string>
+    <string name="minutes_before_match">min avant le match</string>
+    <string name="add_button">Ajouter</string>
+    <string name="cancel_button">Annuler</string>
+    <string name="fill_all_fields">Veuillez remplir tous les champs</string>
+    <string name="pronostic_added">Pronostic ajouté avec succès</string>
+
+    <!-- Statuts -->
+    <string name="status_pending">En attente</string>
+    <string name="status_won">GAGNÉ</string>
+    <string name="status_lost">PERDU</string>
+    <string name="match_in_progress">Match en cours</string>
+
+    <!-- Actions Admin -->
+    <string name="btn_won">Gagné</string>
+    <string name="btn_lost">Perdu</string>
+    <string name="btn_delete">Supprimer</string>
+    <string name="confirm_result">Confirmer le résultat</string>
+    <string name="confirm_won">Marquer ce pronostic comme GAGNÉ ?</string>
+    <string name="confirm_lost">Marquer ce pronostic comme PERDU ?</string>
+    <string name="delete_pronostic">Supprimer le pronostic</string>
+    <string name="confirm_delete">Êtes-vous sûr de vouloir supprimer ce pronostic ?</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+    <string name="result_updated">Résultat mis à jour</string>
+
+    <!-- Statistiques -->
+    <string name="statistics">Statistiques</string>
+    <string name="total">Total</string>
+    <string name="won">Gagnés</string>
+    <string name="lost">Perdus</string>
+    <string name="win_rate">Taux de réussite :</string>
+    <string name="manage_pronostics">Gestion des pronostics</string>
 </resources>

@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -16,6 +17,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 
 import com.zaro.pronosticapp.R;
 import com.zaro.pronosticapp.adapters.MatchAdapter;
@@ -26,20 +28,22 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.zaro.pronosticapp.R;
+import com.zaro.pronosticapp.adapters.AdminMatchAdapter;
 import com.zaro.pronosticapp.models.Match;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 public class AdminDashboardActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    private MatchAdapter adapter;
+    private AdminMatchAdapter adapter;
     private FloatingActionButton fabAddMatch;
     private DatabaseReference matchesRef;
     private List<Match> matchList = new ArrayList<>();
+    private TextView tvTotalMatches, tvWonMatches, tvLostMatches, tvWinRate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,9 +56,13 @@ public class AdminDashboardActivity extends AppCompatActivity {
         // Initialiser les vues
         recyclerView = findViewById(R.id.recyclerViewMatches);
         fabAddMatch = findViewById(R.id.fabAddMatch);
+        tvTotalMatches = findViewById(R.id.tvTotalMatches);
+        tvWonMatches = findViewById(R.id.tvWonMatches);
+        tvLostMatches = findViewById(R.id.tvLostMatches);
+        tvWinRate = findViewById(R.id.tvWinRate);
 
         // Configurer RecyclerView
-        adapter = new MatchAdapter();
+        adapter = new AdminMatchAdapter();
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
 
@@ -70,12 +78,27 @@ public class AdminDashboardActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 matchList.clear();
+                int totalMatches = 0;
+                int wonMatches = 0;
+                int lostMatches = 0;
+
                 for (DataSnapshot data : snapshot.getChildren()) {
                     Match match = data.getValue(Match.class);
                     if (match != null) {
                         matchList.add(match);
+                        totalMatches++;
+
+                        if (match.getStatus().equals("won")) {
+                            wonMatches++;
+                        } else if (match.getStatus().equals("lost")) {
+                            lostMatches++;
+                        }
                     }
                 }
+
+                // Mettre à jour les statistiques
+                updateStatistics(totalMatches, wonMatches, lostMatches);
+
                 adapter.setMatches(matchList);
             }
 
@@ -85,6 +108,21 @@ public class AdminDashboardActivity extends AppCompatActivity {
                         "Erreur : " + error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void updateStatistics(int total, int won, int lost) {
+        tvTotalMatches.setText(String.valueOf(total));
+        tvWonMatches.setText(String.valueOf(won));
+        tvLostMatches.setText(String.valueOf(lost));
+
+        // Calculer le taux de réussite
+        int completed = won + lost;
+        if (completed > 0) {
+            double winRate = (won * 100.0) / completed;
+            tvWinRate.setText(String.format(Locale.getDefault(), "%.1f%%", winRate));
+        } else {
+            tvWinRate.setText("0%");
+        }
     }
 
     private void showAddMatchDialog() {

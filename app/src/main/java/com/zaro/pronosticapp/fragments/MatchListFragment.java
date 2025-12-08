@@ -1,5 +1,6 @@
 package com.zaro.pronosticapp.fragments;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.zaro.pronosticapp.R;
+
+
 import com.zaro.pronosticapp.adapters.MatchAdapter;
 import com.zaro.pronosticapp.models.Match;
 import com.google.firebase.database.DataSnapshot;
@@ -22,7 +25,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-import com.zaro.pronosticapp.R;
 import com.zaro.pronosticapp.adapters.MatchAdapter;
 import com.zaro.pronosticapp.models.Match;
 
@@ -40,6 +42,7 @@ public class MatchListFragment extends Fragment {
     private DatabaseReference matchesRef;
     private List<Match> matchList = new ArrayList<>();
 
+    @SuppressLint("MissingInflatedId")
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,

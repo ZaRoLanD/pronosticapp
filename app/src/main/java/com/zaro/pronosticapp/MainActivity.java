@@ -1,4 +1,4 @@
-package com.zaro.pronosticapp.activities;
+package com.zaro.pronosticapp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.example.pronosticapp.R;
+import com.zaro.pronosticapp.R;
 import com.zaro.pronosticapp.activities.AdminDashboardActivity;
 import com.zaro.pronosticapp.activities.AdminLoginActivity;
 import com.zaro.pronosticapp.adapters.ViewPagerAdapter;
