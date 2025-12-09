@@ -17,7 +17,7 @@
 
         <!-- Activité principale (Point d'entrée) -->
         <activity
-            android:name=".activities.MainActivity"
+            android:name="MainActivity"
             android:exported="true"
             android:theme="@style/Theme.PronosticApp">
             <intent-filter>
@@ -30,13 +30,13 @@
         <activity
             android:name=".activities.AdminLoginActivity"
             android:exported="false"
-            android:parentActivityName=".activities.MainActivity" />
+            android:parentActivityName="MainActivity" />
 
         <!-- Tableau de bord Admin -->
         <activity
             android:name=".activities.AdminDashboardActivity"
             android:exported="false"
-            android:parentActivityName=".activities.MainActivity" />
+            android:parentActivityName="MainActivity" />
 
     </application>
 

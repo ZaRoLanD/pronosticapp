@@ -26,7 +26,17 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorPrimary"
             app:title="Pronostics Sportifs"
+            app:menu="@menu/main_menu"
             app:titleTextColor="@color/colorWhite" />
+
+<!--    <com.google.android.material.navigation.NavigationView-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="?attr/actionBarSize"-->
+<!--        app:title="Pronostics Sportifs"-->
+<!--        android:layout_gravity="start"-->
+<!--        app:menu="@menu/main_menu" />-->
+
 
         <!-- Onglets -->
         <com.google.android.material.tabs.TabLayout
@@ -45,12 +55,5 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </LinearLayout>
-
-<!-- Menu latéral (pour accès admin) -->
-<com.google.android.material.navigation.NavigationView
-    android:id="@+id/navigationView"
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:layout_gravity="start"
-    app:menu="@menu/main_menu" />
 </androidx.drawerlayout.widget.DrawerLayout>
+

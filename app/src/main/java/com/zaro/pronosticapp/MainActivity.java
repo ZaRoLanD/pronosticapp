@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.viewPager);
 
         // Configurer la toolbar
-        setSupportActionBar(toolbar);
+//        setSupportActionBar(toolbar);
 
         // Configurer ViewPager2 avec l'adapter
         adapter = new ViewPagerAdapter(this);

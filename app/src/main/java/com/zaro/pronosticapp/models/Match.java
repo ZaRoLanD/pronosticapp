@@ -1,16 +1,20 @@
 package com.zaro.pronosticapp.models;
 
+import android.util.Log;
+
 public class Match {
+    private static final String TAG = "Match";
+
     private String id;
     private String country;
     private String league;
     private String team1;
     private String team2;
-    private long matchTime; // Timestamp en millisecondes
-    private String pronostic; // "1", "X", "2", "Over 2.5", etc.
-    private String status; // "pending", "won", "lost"
-    private boolean isVisible; // Visibilité pour les utilisateurs
-    private long visibleFrom; // Timestamp à partir duquel le match est visible
+    private long matchTime;
+    private String pronostic;
+    private String status;
+    private boolean isVisible;
+    private long visibleFrom;
     private long createdAt;
     private long updatedAt;
 
@@ -144,9 +148,18 @@ public class Match {
         return System.currentTimeMillis() >= matchTime;
     }
 
+    // VERSION SIMPLIFIÉE de shouldBeVisible
     public boolean shouldBeVisible() {
         long currentTime = System.currentTimeMillis();
-        return isVisible && currentTime >= visibleFrom;
+        boolean result = isVisible && currentTime >= visibleFrom;
+
+        Log.d(TAG, "shouldBeVisible() pour " + getTeamsDisplay());
+        Log.d(TAG, "  isVisible: " + isVisible);
+        Log.d(TAG, "  currentTime: " + currentTime);
+        Log.d(TAG, "  visibleFrom: " + visibleFrom);
+        Log.d(TAG, "  Résultat: " + result);
+
+        return result;
     }
 
     public long getTimeUntilMatch() {
