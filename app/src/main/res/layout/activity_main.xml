@@ -20,14 +20,14 @@
         android:layout_height="wrap_content"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimary"
-            app:title="Pronostics Sportifs"
-            app:menu="@menu/main_menu"
-            app:titleTextColor="@color/colorWhite" />
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/toolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?attr/actionBarSize"-->
+<!--            android:background="@color/colorPrimary"-->
+<!--            app:title="Pronostics Sportifs"-->
+<!--            app:menu="@menu/main_menu"-->
+<!--            app:titleTextColor="@color/colorWhite" />-->
 
 <!--    <com.google.android.material.navigation.NavigationView-->
 <!--        android:id="@+id/toolbar"-->

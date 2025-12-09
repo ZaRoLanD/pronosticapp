@@ -27,15 +27,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="France"
-                android:textColor="@color/textSecondary"
-                android:textSize="12sp"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=" • "
-                android:textColor="@color/textSecondary"
+                android:textColor="@color/colorWhite"
                 tools:ignore="TextSizeCheck" />
 
             <TextView
@@ -43,8 +43,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ligue 1"
-                android:textColor="@color/textSecondary"
-                android:textSize="12sp" />
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp" />
         </LinearLayout>
 
         <!-- Équipes -->
@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:text="PSG vs Marseille"
             android:textColor="@color/textPrimary"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:paddingBottom="8dp" />
 
@@ -73,7 +73,7 @@
                 android:layout_weight="1"
                 android:text="20:00"
                 android:textColor="@color/textPrimary"
-                android:textSize="14sp" />
+                android:textSize="19sp" />
 
             <TextView
                 android:id="@+id/tvPronostic"
@@ -84,7 +84,7 @@
                 android:text="1"
                 android:textColor="@color/colorWhite"
                 android:textStyle="bold"
-                android:textSize="14sp" />
+                android:textSize="19sp" />
         </LinearLayout>
 
         <!-- Zone de statut : Horloge / Résultat -->

@@ -19,7 +19,7 @@
                 android:id="@+id/etCountry"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Pays"
+                android:hint="Pays (Allemagne)"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -28,7 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:hint="Ligue"
+            android:hint="Ligue (Bundesliga)"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -48,7 +48,7 @@
                 android:id="@+id/etTeam1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Équipe 1"
+                android:hint="Équipe 1 (Dortmund)"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -57,7 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:hint="Équipe 2"
+            android:hint="Équipe 2 (Union de Berlin)"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -88,7 +88,7 @@
                 android:id="@+id/etPronostic"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Pronostique"
+                android:hint="Pronostique (V1)"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
