@@ -17,13 +17,12 @@ Une application Android moderne pour gérer et tracker vos pronostics sportifs a
 
 ## ✨ Fonctionnalités
 
-- ✅ **Authentification utilisateur** - Connexion sécurisée avec Firebase Authentication
+- ✅ **Authentification administrateur** - Connexion sécurisée avec Firebase Authentication
+- 🔐 **Sécurité** - Authentification robuste et données chiffrées
 - 📊 **Gestion des pronostics** - Créer, modifier, supprimer et tracker vos pronostics
 - 🔄 **Synchronisation cloud** - Synchronisation en temps réel avec Firebase Realtime Database
-- 👤 **Profil utilisateur** - Gestion personnalisée de votre compte
 - 📱 **Interface moderne** - Design Material Design avec support responsive
 - 🎯 **Statistiques** - Suivi de vos performances et historique de pronostics
-- 🔐 **Sécurité** - Authentification robuste et données chiffrées
 
 ## 🔧 Prérequis
 
