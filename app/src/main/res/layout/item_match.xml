@@ -53,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="PSG vs Marseille"
-            android:textColor="@color/textPrimary"
+            android:textColor="#1E88E5"
             android:textSize="20sp"
             android:textStyle="bold"
             android:paddingBottom="8dp" />

@@ -13,13 +13,13 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="Pays"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etCountry"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Pays (Allemagne)"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -28,7 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:hint="Ligue (Bundesliga)"
+            android:hint="Ligue"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -43,12 +43,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:hint="Équipe 1"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etTeam1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Équipe 1 (Dortmund)"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -57,7 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:hint="Équipe 2 (Union de Berlin)"
+            android:hint="Équipe 2"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -82,13 +83,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:hint="Pronostic (ex: 1, X, 2, Over 2.5)"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etPronostic"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Pronostique (V1)"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -114,7 +115,8 @@
                 android:id="@+id/cbVisible"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="visible immediatement"
+                android:textColor="@color/colorBlack"
+                android:text="Afficher immédiatement (recommandé)"
                 android:checked="true" />
 
             <LinearLayout
@@ -141,8 +143,8 @@
                         android:id="@+id/etVisibleMinutes"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="number"
                         android:textColor="@color/colorBlack"
+                        android:inputType="number"
                         android:text="15" />
                 </com.google.android.material.textfield.TextInputLayout>
 

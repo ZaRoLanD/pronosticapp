@@ -179,6 +179,17 @@ public class AdminDashboardActivity extends AppCompatActivity {
 
                     // Créer le match
                     String matchId = matchesRef.push().getKey();
+
+                    // Calculer visibleFrom
+                    long visibleFromTime;
+                    if (cbVisible.isChecked()) {
+                        // Si "visible immédiatement" est coché → visible maintenant
+                        visibleFromTime = 0;
+                    } else {
+                        // Sinon, utiliser le délai configuré
+                        visibleFromTime = selectedVisibleTime[0];
+                    }
+
                     Match newMatch = new Match(
                             matchId,
                             etCountry.getText().toString().trim(),
@@ -188,8 +199,8 @@ public class AdminDashboardActivity extends AppCompatActivity {
                             selectedMatchTime[0],
                             etPronostic.getText().toString().trim(),
                             "pending",
-                            cbVisible.isChecked(),
-                            selectedVisibleTime[0]
+                            true, // Toujours visible (le flag isVisible)
+                            visibleFromTime // 0 si immédiat, sinon timestamp calculé
                     );
 
                     // Sauvegarder dans Firebase
