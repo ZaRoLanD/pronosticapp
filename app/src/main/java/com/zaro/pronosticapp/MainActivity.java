@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 }
         ).attach();
 
-        // Vérifier si une mise à jour est disponible via Firebase Remote Config
+        // Vérifier si une mise à jour est disponible via Firebase Remote Config et GitHub Releases
         UpdateChecker.check(this);
     }
 
