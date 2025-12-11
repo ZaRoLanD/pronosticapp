@@ -16,6 +16,7 @@ import com.zaro.pronosticapp.activities.AdminLoginActivity;
 import com.zaro.pronosticapp.adapters.ViewPagerAdapter;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
+import com.zaro.pronosticapp.utilis.UpdateChecker;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -60,6 +61,9 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         ).attach();
+
+        // Vérifier si une mise à jour est disponible via Firebase Remote Config
+        UpdateChecker.check(this);
     }
 
     @Override
