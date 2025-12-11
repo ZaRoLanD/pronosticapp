@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
     <!-- Permissions Internet pour Firebase -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -14,30 +13,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PronosticApp"
         tools:targetApi="31">
-
-        <!-- Activité principale (Point d'entrée) -->
+        <!-- Splash Screen (Point d'entrée) -->
         <activity
-            android:name="MainActivity"
+            android:name=".activities.SplashActivity"
             android:exported="true"
-            android:theme="@style/Theme.PronosticApp">
+            android:theme="@style/Theme.PronosticApp.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <!-- Connexion Admin -->
+        <!-- Activité principale (Point d'entrée) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.PronosticApp"/>
+            <!-- Connexion Admin -->
         <activity
             android:name=".activities.AdminLoginActivity"
             android:exported="false"
-            android:parentActivityName="MainActivity" />
-
-        <!-- Tableau de bord Admin -->
+            android:parentActivityName=".MainActivity" /> <!-- Tableau de bord Admin -->
         <activity
             android:name=".activities.AdminDashboardActivity"
             android:exported="false"
-            android:parentActivityName="MainActivity" />
-
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>

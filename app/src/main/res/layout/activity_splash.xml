@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- LOGO -->
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:contentDescription="Logo" />
+
+    <!-- TITRE / NOM APP -->
+    <TextView
+        android:id="@+id/tvAppName"
+        android:layout_below="@id/ivLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="PronosticApp"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_marginTop="25dp"
+        android:textColor="#000000" />
+
+    <!-- SLOGAN -->
+    <TextView
+        android:id="@+id/tvTagline"
+        android:layout_below="@id/tvAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Vos pronostics, notre passion"
+        android:textSize="16sp"
+        android:textColor="#555555"
+        android:layout_marginTop="10dp"/>
+
+</RelativeLayout>
